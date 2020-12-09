@@ -13,11 +13,26 @@
 ## اصطلاحاتی که در زمینه ی داکر استفاده می شوند
 خالی
 ### Docker file
-خالی
+داکر یک image را به وسیله ی خواندن دستورات موجود در یک dockerfile می سازد. یک dockerfile یک فایل text است که تمامی دستوراتی که نیاز برای صدا زده شدن است تا یک image ساخته شود.  یک کاربر برای ساختن یک فایل image از دستور ``` docker build ``` استفاده می کند و خود داکر به طور اتوماتیک با استفاده از خواندن دستورات dockerfile این فایل image را می سازد. ورودی و خروجی این کد را در زیر مشاهده می کنید.
+
+<div dir = 'ltr'>
+  
+```
+$ docker build .
+
+Sending build context to Docker daemon  6.51 MB
+...
+```
+</div>
+
+![enter image description here](https://miro.medium.com/max/2400/1*p8k1b2DZTQEW_yf0hYniXw.png)
+
 ### Docker image
 خالی
 ### Docker containers
-خالی
+
+![enter image description here](https://miro.medium.com/max/700/0*ujI404Gnomn1Wz5h.png)
+
 ### Docker Hub
 خالی
 ### Docker deployment and orchestration
