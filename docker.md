@@ -101,14 +101,22 @@ sudo docker restart ID_OR_NAME_OF_A_CONTAINER
 ### چگونه وارد کانتینر شویم؟
 برای وارد شدن به کانتینر از دستور ``` docker exec ``` استفاده می کنیم.
 
+<div dir = 'ltr'>
+  
 ``` docker exec [OPTIONS] CONTAINER COMMAND [ARG...] ```
+
+</div>
 
 به عنوان مثال دستور  ``` $ docker exec -d ubuntu_bash touch /tmp/execWorks ``` فایل /tmp/execWorks را درون کانتینر ubuntu_bash در پس زمینه اجرا می کند.
 
 ### چگونه کانتینرمان را پاک کنیم؟
 برای پاک کردن یک کانتینر از دستور docker rm استفاده می کنیم.
 
+<div dir = 'ltr'>
+ 
 ``` sudo docker rm ID_OR_NAME_OF_A_CONTAINER ``` 
+
+</div>
 
 با این دستور تنها کانتینر هایی که در حالت stop هستند را می توان اجرا کرد. اگر کانتینر در حالت start بود از آپشن ``` -f ``` استفاده می کنیم.
 
