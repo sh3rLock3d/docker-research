@@ -10,37 +10,81 @@
 نکته حایز اهمیتی که برای داکر وجود داشت این بود که در آن زمان که هنوز داکر در نسخه 1.0 قرار داشت بانک‌های معروف و بزرگ از آن برای سرویس‌ها و سرورهای خود استفاده می‌کردند که این مورد نشان دهنده امنیت بالای داکر در آن زمان بود.
 ## راهنمای نصب داکر
 برای نصب داکر بر روی سیستم عامل لینوکس خود دو راه وجود دارد:
-### نصب داکر از ریپوهای پیش فرض:
+### روش اول: نصب داکر از ریپوهای پیش فرض
 گام اول: آپدیت کردن نرم افزارها
-``` 
-ablol
-```
 <div dir = 'ltr'>
+  
 ```
 sudo apt-get update
 ```  
 </div>
 گام دوم: حذف نسخه قبلی داکر
 <div dir = 'ltr'>
+  
 ```
 sudo apt-get remove docker docker-engine docker.io
 ```  
 </div>
 گام سوم: نصب داکر
 <div dir = 'ltr'>
+  
 ```
 sudo apt install docker.io
 ```  
 </div>
 گام چهارم: بالا آورن داکر
 <div dir = 'ltr'>
-```sudo systemctl start docker```  
+  
+```
+sudo systemctl start docker
+```  
 ```
 sudo systemctl enable docker
 ```  
 </div>
 گام پنجم: چک کردن ورژن داکر نصب شده
 <div dir = 'ltr'>
+  
+```
+docker --version
+```  
+</div>
+
+### نصب داکر از ریپوهای پیش فرض:
+گام اول: آپدیت کردن نرم افزارها
+<div dir = 'ltr'>
+  
+```
+sudo apt-get update
+```  
+</div>
+گام دوم: حذف نسخه قبلی داکر
+<div dir = 'ltr'>
+  
+```
+sudo apt-get remove docker docker-engine docker.io
+```  
+</div>
+گام سوم: نصب داکر
+<div dir = 'ltr'>
+  
+```
+sudo apt install docker.io
+```  
+</div>
+گام چهارم: بالا آورن داکر
+<div dir = 'ltr'>
+  
+```
+sudo systemctl start docker
+```  
+```
+sudo systemctl enable docker
+```  
+</div>
+گام پنجم: چک کردن ورژن داکر نصب شده
+<div dir = 'ltr'>
+  
 ```
 docker --version
 ```  
