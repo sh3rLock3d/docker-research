@@ -29,6 +29,7 @@
 ## چگونگی استفاده از Docker و دستورات آن
 ### چگونه از یک Docker image کانتینر بسازیم؟
 همان طور که در بالاتر گفته شد برای ساخت یک کانتینر نیاز به Image داریم. با داشتن این ایمیج و دستور docker run می توان کانتینر مورد نظر را ساخت.
+
 <div dir = 'ltr'>
   
 ```
@@ -36,6 +37,7 @@ sudo docker run -d IMAGE_ID_OR_NAME
 sudo docker run -itd IMAGE_ID_OR_NAME
 ```
 </div>
+
 در یکی از دستورات بالا از آپشن d و در دیگری از آپشن i و t و d استفاده کردیم. در docker run آپشن های دیگری نیز وجود دارد که در زیر به آن ها اشاره می کنیم:
   - -i : stdin را حتی در صورت متصل نبودن باز نگه می دارد.
   - -t : یک tty از کانتینر می سازد.
@@ -47,9 +49,11 @@ sudo docker run -itd IMAGE_ID_OR_NAME
   - --name : به کانتینر یک نام اختصاص می دهد.
   در این آدرس می توانید لیست کاملی از آپشن های Docker run را مشاهده کنید.
   https://docs.docker.com/engine/reference/run
+  
 ### چگونه از حال یک کانتینر باخبر شویم ؟
 در این قسمت می خواهیم نسان دهیم چگونه می توان از حال یک داکر باخبر شد.
 با دستور ```  docker ps  ```  می توان تمامی کانتینر های در حال اجرا را نشان داد. به عنوان مثال در زیر می توان دید.
+
 <div dir = 'ltr'>
   
 ```
@@ -60,8 +64,10 @@ CONTAINER ID        IMAGE                        COMMAND                CREATED 
 d7886598dbe2        crosbymichael/redis:latest   /redis-server --dir    33 minutes ago       Up 33 minutes       6379/tcp            redis,webapp/db
 ```
 </div>
+
 برای دیدن تمامی کانتینر ها  از دستور ``` sudo docker ps -a ``` استفاده می کنیم.
 برای دیدن log یک کانتینر از دستور زیر استفاده می کنیم.
+
 <div dir = 'ltr'>
 
 ``` sudo docker logs ID_OR_NAME_OF_A_CONTAINER ```
