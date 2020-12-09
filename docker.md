@@ -95,38 +95,75 @@ sudo apt-get install apt-transport-https ca-certificates curl software-propertie
   - ```software-properties-common``` : اسکریپت‌هایی را برای مدیریت نرم افزار اضافه می‌کند.
   
 گام سوم: اضافه کردن Docker’s GPG Key
+
+کلید GPG یک ویژگی امنیتی است، برای اطمینان از معتبر بودن نرم افزاری که نصب می کنید ، دستور زیر را در ترمینال وارد کنید:
 <div dir = 'ltr'>
   
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
 ```  
 </div>
+اگر پاسخ OK در ترمینال مشاهده شد یعنی نرم افزار معتبر است.
+
 گام چهارم: نصب ریپو داکر
+
+برای نصب ریپو داکر دستور زیر را در ترمینال وارد کنید:
 <div dir = 'ltr'>
   
 ```
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable" 
 ```  
 </div>
+
+برای تفسیر دستورات بالا داریم:
+
+  - ```lsb_release –cs``` : در واقع این دستور codename نصب ما را بر ‌گرداند.
+  - ```stable``` : این هم در واقع نوع داکر منتشر شده است.
+  
 گام پنجم: آپدیت کردن ریپوها
+
+برای به روزرسانی ریپوها برای بار دیگر دستور زیر را در ترمینال وارد کنید:
 <div dir = 'ltr'>
   
 ```
 sudo apt-get update
 ```  
 </div>
+
 گام ششم: نصب آخرین نسخه داکر
+
+برای نصب آخرین نسخه منتشر شده داکر دستور زیر را وارد کنید:
 <div dir = 'ltr'>
   
 ```
 sudo apt-get install docker-ce
 ```  
 </div>
+
 گام هفتم(اختیاری): نصب نسخه مشخص از داکر
+
+برای دسترسی به لیستی از نسخه‌های مختلف داکر منتشر شده دستور زیر را وارد می‌کنیم:
 <div dir = 'ltr'>
   
 ```
 apt-cache madison docker-ce
+```  
+</div>
+به شما لیستی از داکرهای منتشر شده نشان داده می‌شود.
+
+برای نصب نسخه مورد نظر می‌توانید دستور زیر را در ترمینال وارد کنید:
+<div dir = 'ltr'>
+  
+```
+sudo apt-get install docker-ce=<VERSION>
+```  
+</div>
+
+که در اینجا <VERSION> همان نسخه داکری است که می‌خواهید نصب کنید، به طور مثال دستور فوق می‌تواند به صورت زیر باشد:
+<div dir = 'ltr'>
+  
+```
+sudo apt-get install docker-ce=18.03.1~ce~3-0~ubuntu
 ```  
 </div>
 
