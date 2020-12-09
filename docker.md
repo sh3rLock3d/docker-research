@@ -50,43 +50,54 @@ docker --version
 ```  
 </div>
 
-### نصب داکر از ریپوهای پیش فرض:
-گام اول: آپدیت کردن نرم افزارها
+### روش دوم: نصب داکر از ریپو رسمی
+گام اول: آپدیت کردن دیتابیس محلی
 <div dir = 'ltr'>
   
 ```
 sudo apt-get update
 ```  
 </div>
-گام دوم: حذف نسخه قبلی داکر
+گام دوم: دانلود وابستگی‌ها
 <div dir = 'ltr'>
   
 ```
-sudo apt-get remove docker docker-engine docker.io
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 ```  
 </div>
-گام سوم: نصب داکر
+گام سوم: اضافه کردن Docker’s GPG Key
 <div dir = 'ltr'>
   
 ```
-sudo apt install docker.io
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
 ```  
 </div>
-گام چهارم: بالا آورن داکر
+گام چهارم: نصب ریپو داکر
 <div dir = 'ltr'>
   
 ```
-sudo systemctl start docker
-```  
-```
-sudo systemctl enable docker
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable" 
 ```  
 </div>
-گام پنجم: چک کردن ورژن داکر نصب شده
+گام پنجم: آپدیت کردن ریپوها
 <div dir = 'ltr'>
   
 ```
-docker --version
+sudo apt-get update
+```  
+</div>
+گام ششم: نصب آخرین نسخه داکر
+<div dir = 'ltr'>
+  
+```
+sudo apt-get install docker-ce
+```  
+</div>
+گام هفتم(اختیاری): نصب نسخه مشخص از داکر
+<div dir = 'ltr'>
+  
+```
+apt-cache madison docker-ce
 ```  
 </div>
 ## چه کسانی از Docker استفاده می کنند؟
