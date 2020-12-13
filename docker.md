@@ -192,7 +192,7 @@ Sending build context to Docker daemon  6.51 MB
 ### Docker image
 هنگامی که Dockerfile خود را نوشتید ، برای ساخت یک Image بر اساس آن Dockerfile ، از ابزار  Docker build استفاده می کنید. در حالی که Dockerfile مجموعه دستورالعملهایی است که نحوه ساخت image را به شما می گوید ،  Docker image یک فایل قابل حمل است که حاوی مشخصاتی است برای این که کدام  اجزا نرم افزاری container اجرا خواهند شد و چگونه اجرا می‌شوند. از آنجا که یک Dockerfile احتمالاً شامل دستورالعمل هایی در مورد گرفتن برخی از بسته های نرم افزاری از مخازن آنلاین است ، بنابراین باید دقیقاً نسخه های مناسب را مشخص کنید ، در غیر این صورت ممکن است بسته به زمان استناد ، Dockerfile شما imageهای متناقضی را ایجاد کند.Codefresh نگاهی به نحوه ساختن تصویر با جزئیات بیشتر ارائه می دهد.
 ### Docker containers
-
+نمونه های در حال اجرایی از Image ها هستند. 
 ![enter image description here](https://miro.medium.com/max/700/0*ujI404Gnomn1Wz5h.png)
 
 ### Docker Hub
